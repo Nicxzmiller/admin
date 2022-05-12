@@ -1,6 +1,6 @@
 import React from 'react'
 import "./sidebar.scss"
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import GridViewIcon from '@mui/icons-material/GridView';
 import GroupIcon from '@mui/icons-material/Group';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -28,7 +28,7 @@ const Sidebar = () => {
 
           <p className="title">MAIN</p>
           <li>
-            <DashboardIcon className="icon"/>
+            <GridViewIcon className="icon"/>
             <span>Dashboard</span>
           </li>
 

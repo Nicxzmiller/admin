@@ -1,9 +1,17 @@
 import React from 'react'
+import SearchIcon from '@mui/icons-material/Search';
 import "./navbar.scss"
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div>
+      <div className='wrapper'>
+        <div className='search'>
+          <input type="text" placeholder='Search...'/>
+          <SearchIcon/>
+        </div>
+      </div>
+    </div>
   )
 }
 
