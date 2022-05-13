@@ -10,13 +10,17 @@ const Widgets = ({type}) => {
 
   let data;
 
+  //temporary
+  const amount = 100;
+  const diff = 20;
+
   switch(type){
     case "user":
       data={
         title:"USERS",
         isMoney:false,
         link:"See all users",
-        icon: <PersonIcon className='icon'/>
+        icon: <PersonIcon className='icon' style={{color:"crimson"}}/>
       };
       break;
       case "order":
@@ -24,7 +28,7 @@ const Widgets = ({type}) => {
         title:"ORDERS",
         isMoney:false,
         link:"See all orders",
-        icon: <CreditCardIcon className='icon'/>
+        icon: <CreditCardIcon className='icon' style={{color:"#2979ff"}}/>
       };
       break;
       case "earning":
@@ -32,7 +36,7 @@ const Widgets = ({type}) => {
         title:"EARNINGS",
         isMoney:true,
         link:"View earnings",
-        icon: <PaidIcon className='icon'/>
+        icon: <PaidIcon className='icon' style={{color:"#3f51b5"}}/>
       };
       break;
       case "balance":
@@ -40,7 +44,7 @@ const Widgets = ({type}) => {
         title:"BALANCE",
         isMoney:true,
         link:"View balance info",
-        icon: <AccountBalanceWalletIcon className='icon'/>
+        icon: <AccountBalanceWalletIcon className='icon' style={{color:"#ff5722"}}/>
       };
       break;
       default:
@@ -49,15 +53,15 @@ const Widgets = ({type}) => {
   return (
     <div className='widget'>
         <div className="left">
-          <span className='title'>USERS</span>
-          <span className="counter">21321</span>
-          <span className="link">See all Users</span>
+          <span className='title'>{data.title}</span>
+          <span className="counter">{data.isMoney && "$"} {amount}</span>
+          <span className="link">{data.link}</span>
         </div>
         <div className="right">
           <div className="percentage positive">
-            <KeyboardArrowUpIcon/> 20%
+            <KeyboardArrowUpIcon/> {diff} %
           </div>
-          <PersonIcon className='icon'/>
+          {data.icon}
         </div>
     </div>
   )
