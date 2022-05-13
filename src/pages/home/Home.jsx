@@ -13,6 +13,8 @@ const Home = () => {
           <div className="widgets">
             <Widgets/>
             <Widgets/>
+            <Widgets/>
+            <Widgets/>
           </div>
         </div>
     </div>
