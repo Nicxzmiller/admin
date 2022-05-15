@@ -19,6 +19,9 @@ const BasicTable = () => {
           date: "1 March",
           amount: 785,
           method: "Cash on Delivery",
+          email:"js@yahoo.com",
+          phone: 5641345,
+          gender: "M",
           status: "Approved",
         },
         {
@@ -29,6 +32,9 @@ const BasicTable = () => {
           date: "13 March",
           amount: 900,
           method: "Online Payment",
+          email:"miko@yahoo.com",
+          phone: 4597632,
+          gender: "M",
           status: "Pending",
         },
         {
@@ -39,6 +45,9 @@ const BasicTable = () => {
           date: "9 May",
           amount: 35,
           method: "Cash on Delivery",
+          email:"josm@yahoo.com",
+          phone: 5578534,
+          gender: "M",
           status: "Pending",
         },
         {
@@ -49,6 +58,9 @@ const BasicTable = () => {
           date: "11 April",
           amount: 920,
           method: "Online",
+          email:"janes@gmail.com",
+          phone: 8742434,
+          gender: "F",
           status: "Approved",
         },
         {
@@ -59,6 +71,9 @@ const BasicTable = () => {
           date: "29 March",
           amount: 2000,
           method: "Online",
+          email:"hc@yahoo.com",
+          phone: 5097454,
+          gender: "M",
           status: "Pending",
         },
       ];
@@ -71,9 +86,9 @@ const BasicTable = () => {
                 <TableCell className="tableCell">Tracking ID</TableCell>
                 <TableCell className="tableCell">Product</TableCell>
                 <TableCell className="tableCell">Customer</TableCell>
-                <TableCell className="tableCell">Date</TableCell>
-                <TableCell className="tableCell">Amount</TableCell>
-                <TableCell className="tableCell">Payment Method</TableCell>
+                <TableCell className="tableCell">Email</TableCell>
+                <TableCell className="tableCell">Phone Number</TableCell>
+                <TableCell className="tableCell">Gender</TableCell>
                 <TableCell className="tableCell">Status</TableCell>
                 </TableRow>
             </TableHead>
@@ -88,9 +103,9 @@ const BasicTable = () => {
                 </div>
                 </TableCell>
                 <TableCell className="tableCell">{row.customer}</TableCell>
-                <TableCell className="tableCell">{row.date}</TableCell>
-                <TableCell className="tableCell">{row.amount}</TableCell>
-                <TableCell className="tableCell">{row.method}</TableCell>
+                <TableCell className="tableCell">{row.email}</TableCell>
+                <TableCell className="tableCell">{row.phone}</TableCell>
+                <TableCell className="tableCell">{row.gender}</TableCell>
                 <TableCell className="tableCell">
                 <span className={`status ${row.status}`}>{row.status}</span>
                 </TableCell>
