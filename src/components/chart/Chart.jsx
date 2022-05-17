@@ -2,7 +2,7 @@ import React from 'react'
 import "./chart.scss"
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const Chart = () => {
+const Chart = ({aspect, title}) => {
   const data = [
     {
       name: "January",
@@ -32,23 +32,23 @@ const Chart = () => {
 
   return (
     <div className='chart'>
-    <div className="title">Last 7 Months (revenue)</div>
-      <ResponsiveContainer width="100%">
-        <AreaChart width={730} height={250} data={data}
-          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-          <defs>
-            <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#6439ff" stopOpacity={0.8}/>
-              <stop offset="95%" stopColor="#6439ff" stopOpacity={0}/>
-            </linearGradient>
-          </defs>
-          <XAxis dataKey="name" />
-          <YAxis />
-          <CartesianGrid strokeDasharray="3 3" className='chartGrid'/>
-          <Tooltip />
-          <Area type="monotone" dataKey="Total" stroke="#6439ff" fillOpacity={1} fill="url(#total)" />
-        </AreaChart>
-      </ResponsiveContainer>
+      <div className="title">{title}</div>
+        <ResponsiveContainer width="100%" aspect={aspect}>
+          <AreaChart width={730} height={250} data={data}
+            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+            <defs>
+              <linearGradient id="total" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#6439ff" stopOpacity={0.8}/>
+                <stop offset="95%" stopColor="#6439ff" stopOpacity={0}/>
+              </linearGradient>
+            </defs>
+            <XAxis dataKey="name" />
+            <YAxis />
+            <CartesianGrid strokeDasharray="3 3" className='chartGrid'/>
+            <Tooltip />
+            <Area type="monotone" dataKey="Total" stroke="#6439ff" fillOpacity={1} fill="url(#total)" />
+          </AreaChart>
+        </ResponsiveContainer>
     </div>
   )
 }

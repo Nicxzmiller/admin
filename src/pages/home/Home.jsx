@@ -9,7 +9,7 @@ import Team from '../../components/Team/Team'
 import Widgets from '../../components/widgets/Widgets'
 import './home.scss'
 
-const Home = () => {
+const Home = ({title}) => {
   return (
     <div className='home'>
         <Sidebar className="sidebar"/>
@@ -23,7 +23,7 @@ const Home = () => {
           </div>
           <div className="charts">
             <Featured/>
-            <Chart/>
+            <Chart title={"Last 6 Months (Revenue)"}/>
           </div>
           <div className="listContainer">
             <div className="listTitle">Latest Transactions</div>
