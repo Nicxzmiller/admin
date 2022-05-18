@@ -13,12 +13,16 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
+import { Link } from "react-router-dom";
+
 const Sidebar = () => {
   return (
     <div className='sidebar'>
       {/* top section of sidebar */}
       <div className="top">
-        <span className="logo">G-51 Admin</span>
+        <Link to="/" style={{textDecoration:"none"}}>
+          <span className="logo">G-51 Admin</span>
+        </Link>
       </div>
       <hr />
 
@@ -27,20 +31,29 @@ const Sidebar = () => {
         <ul>
 
           <p className="title">MAIN</p>
-          <li>
-            <GridViewIcon className="icon"/>
-            <span>Dashboard</span>
-          </li>
+
+          <Link to="/" style={{textDecoration:"none"}}>
+            <li>
+              <GridViewIcon className="icon"/>
+              <span>Dashboard</span>
+            </li>
+          </Link>
 
           <p className="title">LISTS</p>
-          <li>
-            <GroupIcon className="icon"/>
-            <span>Users</span>
-          </li>
-          <li>
-            <ShoppingBagIcon className="icon"/>
-            <span>Products</span>
-          </li>
+
+          <Link to="/users" style={{textDecoration:"none"}}>
+            <li>
+              <GroupIcon className="icon"/>
+              <span>Users</span>
+            </li>
+          </Link>
+
+          <Link to="/products" style={{textDecoration:"none"}}> 
+            <li>
+              <ShoppingBagIcon className="icon"/>
+              <span>Products</span>
+            </li>
+          </Link>    
           <li>
             <CreditCardIcon className="icon"/>
             <span>Orders</span>
