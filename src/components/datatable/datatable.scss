@@ -2,6 +2,30 @@
     height: 600px;
     padding: 20px;
 
+    .datatableTitle{
+        width: 100%;
+        font-size: 24PX;
+        color: gray;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .link{
+            text-decoration: none;
+            color: #6439ff;
+            font-size: 16px;
+            font-weight: 400;
+            border: 1px solid #6439ff;
+            padding: 7px;
+
+            &:hover{
+                background-color:#7765b8ce;
+                color: #fff;
+            }
+        }
+    }
+
     .cellWithImg{
         display: flex;
         align-items: center;
@@ -42,6 +66,7 @@
     gap: 20px;
     align-items: center;
     justify-content: space-between;
+    outline: none;
     
 
     .viewButton, .deleteButton{

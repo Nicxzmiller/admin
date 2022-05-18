@@ -9,11 +9,12 @@ import {
   Route,
 } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
+import "./theme/dark.scss";
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="app dark">
       <BrowserRouter>
         <Routes>
           <Route path="/">
