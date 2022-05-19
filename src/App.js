@@ -16,7 +16,7 @@ import "./theme/purple.scss";
 
 function App() {
   return (
-    <div className="app purple">
+    <div className="app">
       <BrowserRouter>
         <Routes>
           <Route path="/">
