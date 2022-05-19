@@ -1,5 +1,5 @@
-.app.dark{
-    background-color: #222;
+.app.purple{
+    background-color: #800080;
     color: rgb(228, 225, 225);
 
     .chartGrid{
@@ -7,7 +7,7 @@
     }
 
     .table{
-        background-color: #222;
+        background-color: #C21170;
         -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -63,12 +63,12 @@
     }
 
     .sidebar{
-        background-color: #222;
+        background-color:#660466;
         border-color: #333;
 
         .top{
             .logo{
-                color: #999;
+                color: #fff;
             }
         }
         hr{
@@ -79,7 +79,7 @@
 
             li{
                 &:hover{
-                    background-color:#6439ff;
+                    background-color:#C21170;
                     color: #fff;
                 }
 
@@ -133,5 +133,23 @@
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
     }
+
+    .chart{
+        linearGradient{
+            stop{
+                stop-color: #fff;
+            }
+        }
+
+    }
+
+    .CircularProgressbar-path {
+        stroke: #C21170;
+      }
+
+      .CircularProgressbar-text {
+        fill: #fff;
+      }
+
   
 }

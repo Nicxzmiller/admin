@@ -98,7 +98,7 @@ const Sidebar = () => {
       </div>
 
       {/* bottom section of sidebar */}
-      <div className="bottom">
+      <div className="bottomTheme">
         <div className="colorOption"></div>
         <div className="colorOption"></div>
         <div className="colorOption"></div>

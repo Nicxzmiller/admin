@@ -10,11 +10,13 @@ import {
 } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./theme/dark.scss";
+import "./theme/purple.scss";
+
 
 
 function App() {
   return (
-    <div className="app dark">
+    <div className="app purple">
       <BrowserRouter>
         <Routes>
           <Route path="/">
