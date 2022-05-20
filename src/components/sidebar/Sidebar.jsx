@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./sidebar.scss"
 import GridViewIcon from '@mui/icons-material/GridView';
 import GroupIcon from '@mui/icons-material/Group';
@@ -14,8 +14,12 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 import { Link } from "react-router-dom";
+import { DarkModeContext } from '../../context/darkModeContext';
 
 const Sidebar = () => {
+
+  const { dispatch } = useContext(DarkModeContext);
+
   return (
     <div className='sidebar'>
       {/* top section of sidebar */}
@@ -99,8 +103,8 @@ const Sidebar = () => {
 
       {/* bottom section of sidebar */}
       <div className="bottomTheme">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div className="colorOption" onClick={() => dispatch({type:"LIGHT"})}></div>
+        <div className="colorOption" onClick={() => dispatch({type:"DARK"})}></div>
         <div className="colorOption"></div>
         <div className="colorOption"></div>
       </div>
