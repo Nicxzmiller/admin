@@ -13,15 +13,17 @@ import "./theme/dark.scss";
 import "./theme/purple.scss";
 import { useContext, useState } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { PurpleModeContext } from "./context/purpleModeContext";
 
 
 
 function App() {
 
   const {darkMode} = useContext(DarkModeContext)
+  const {purpleMode} = useContext(PurpleModeContext)
 
   return (
-    <div className={darkMode ? "app dark" : "app"}>
+    <div className={darkMode ? "app dark" : "app" && purpleMode ? "app purple" : "app"}>
       <BrowserRouter>
         <Routes>
           <Route path="/">

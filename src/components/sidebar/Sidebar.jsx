@@ -15,10 +15,11 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 
 import { Link } from "react-router-dom";
 import { DarkModeContext } from '../../context/darkModeContext';
+import { PurpleModeContext } from '../../context/purpleModeContext';
 
 const Sidebar = () => {
 
-  const { dispatch } = useContext(DarkModeContext);
+  const { dispatch } = useContext(DarkModeContext, PurpleModeContext);
 
   return (
     <div className='sidebar'>
@@ -105,8 +106,7 @@ const Sidebar = () => {
       <div className="bottomTheme">
         <div className="colorOption" onClick={() => dispatch({type:"LIGHT"})}></div>
         <div className="colorOption" onClick={() => dispatch({type:"DARK"})}></div>
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div className="colorOption" onClick={() => dispatch({type:"PURPLE"})}></div> 
       </div>
     </div>
   )
